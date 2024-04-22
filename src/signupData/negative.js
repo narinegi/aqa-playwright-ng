@@ -34,7 +34,7 @@ export const passwordDetails = {
     invalidValue2: 'nOnNUMERIC',
     invalidValue3: '      ',
     invalidValue4: '7006555',
-    invalidValue5: 'TESTNG',
+    invalidValue5: 'TESTN',
     shortValue: 'Hello',
     longValue: 'Doesnotmeetrequirementsandfailsvalidationpleasecorrect'
 };

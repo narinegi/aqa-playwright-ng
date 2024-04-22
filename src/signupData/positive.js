@@ -6,3 +6,4 @@ const signupData = {
     repeatPassword: 'Test@700'
 };
 export default signupData;
+

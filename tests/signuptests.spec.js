@@ -226,13 +226,11 @@ test.describe('Negative Sign up ', () => {
                 for (const [fieldName, value] of Object.entries(passwordConfirmation)) {
                     await repeatPasswordField.fill(value);
                     await expect(repeatPasswordField, `Value should be '${value}'`).toHaveValue(value);
-
                     if (fieldName === 'passwordsDoNotMatch') {
                         await expect(invalidField).toHaveText('Passwords do not match');
                     } else {
                         await expect(invalidField).toHaveText('Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter');
                     }
-
                     await expect(registerBtn).toBeDisabled();
                     await repeatPasswordField.clear();
                 }
