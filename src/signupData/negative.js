@@ -6,7 +6,7 @@ export const firstNameDetails = {
     invalidValue2: '   Test ',
     invalidValue3: '      ',
     invalidValue4: '000',
-    notEnglishValue: 'хеллоу',
+    nonEnglish: 'хеллоу',
     longValue: 'Doesnotmeetrequirementsandfailsvalidationpleasecorrect',
     LongInvalidValue: 'Doesnotmeetrequirementsandfailsvalidationpleasecorrect!!!'
 };
@@ -15,8 +15,8 @@ export const lastNameDetails = {
     invalidValue1: 'Ilnytsk@',
     invalidValue2: '   Ilnytska ',
     invalidValue3: '       ',
-    invalidValue4: '123',
-    notEnglishValue: 'Ільницька',
+    invalidValue4: '123@',
+    nonEnglish: 'Ільницька',
     longValue: 'Doesnotmeetrequirementsandfailsvalidationpleasecorrect',
     LongInvalidValue: 'Doesnotmeetrequirementsandfailsvalidationpleasecorrect'
 };
@@ -25,7 +25,7 @@ export const emailDetails = {
     invalidValue2: 'testng.com',
     invalidValue3: '     ',
     invalidValue4: 'narine@.com',
-    invalidValue5: 'narinei@test.om',
+    invalidValue5: 'narinei@test.o',
     invalidValue6: '@testtest.com',
     invalidValue7: 'narine@test'
 };
@@ -35,12 +35,11 @@ export const passwordDetails = {
     invalidValue3: '      ',
     invalidValue4: '7006555',
     invalidValue5: 'TESTNG',
-    notEnglishValue: 'Ільницька',
     shortValue: 'Hello',
     longValue: 'Doesnotmeetrequirementsandfailsvalidationpleasecorrect'
 };
 export const passwordConfirmation = {
-    noMatch: 'noMatchPass1',
+    passwordMatch: 'password00',
     invalidValue1: 'onlylowercase',
     invalidValue2: 'nOnNUMERIC',
     invalidValue3: '     ',
