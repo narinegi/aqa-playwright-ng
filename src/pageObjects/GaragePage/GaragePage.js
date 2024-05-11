@@ -1,24 +1,25 @@
 import BasePage from "../BasePage.js";
 import { SideBar } from "./components/SideBar.js";
 import Header from "../../components/Header.js";
+import { AddCarPopup } from "./components/AddCar.js";
+import BaseComponent from "../../components/BaseComponent.js";
 
 export default class GaragePage extends BasePage {
     constructor(page) {
-        super(page, "/panel/garage");
+        super(page);
         this.titleGaragePage = page.locator('h1', { hasText: 'Garage' });
-        this.sideBar = new SideBar(page); // Here, use SideBar directly instead of this.sideBar
-        this.header = new Header(page);
-        this.profileBtnInHeader = page.getByRole('button', {name: 'My profile'});
+        this.sideBar = new SideBar(this._page);
+        this.header = new Header(this._page);
+        this.addCarButton = page.getByRole('button', { name: 'Add car' });
+        this.existingCarsList = page.locator('.car-list .car-item');
     }
 
-    async navigate() {
-        await this._page.goto(this._url);
+    async openAddCarPopup() {
+        await this.addCarButton.click();
+        return new AddCarPopup(this._page);
     }
 
-    async presentProfile() {
-        // Add logic to present the user's profile here
-        // For example, clicking on the profile button in the header
-        await this.header.clickProfileButton();
-        // Optionally, return any relevant information about the profile
+    async getExistingCarsCount() {
+        return await this.existingCarsList.count();
     }
 }

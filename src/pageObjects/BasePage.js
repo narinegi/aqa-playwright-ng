@@ -5,7 +5,13 @@ export default class BasePage {
         this._page = page;
         this._url = url;
         this.header = new Header(page);
+    }
 
+    async navigate() {
+        await this._page.goto(this._url);
+    }
 
+    get page() {
+        return this._page;
     }
 }
