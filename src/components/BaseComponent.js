@@ -10,3 +10,4 @@ export default class BaseComponent {
         await expect(this.container).toBeVisible();
     }
 }
+

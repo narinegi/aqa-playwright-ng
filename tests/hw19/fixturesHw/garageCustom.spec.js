@@ -17,8 +17,6 @@ test.describe('Garage custom fixtures', () => {
         await addCarPopup.selectAddCarModel.selectOption(car.model);
         await addCarPopup.imputAddCarMileage.fill(car.miles);
         expect(addCarPopup.submitNewCarButton).toBeVisible();
-
-
         await addCarPopup.submitNewCarButton.click();
 
         await garagePage.page.waitForResponse("/api/cars");

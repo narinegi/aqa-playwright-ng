@@ -2,7 +2,6 @@ import { test, expect } from "@playwright/test";
 import { WelcomePage } from "../../src/pageObjects/WelcomePage/WelcomePage.js";
 import { user_storage_state_path } from "../../src/constant.js";
 import { loginData } from "../../../src/testData/loginData.js";
-
 test.describe('Setup', () => {
         test("Login and Save as test user", async ({page}) => {
                 const welcomePage = new WelcomePage(page);
