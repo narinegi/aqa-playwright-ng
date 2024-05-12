@@ -1,6 +1,5 @@
 import { test, expect } from '../../../src/fixtures/LoginState.js';
 import { car } from "../../../src/testData/Car.js";
-
 test.describe('Garage (storage state)', () => {
 
     test('Add car button should be displayed', async ({ garagePage }) => {

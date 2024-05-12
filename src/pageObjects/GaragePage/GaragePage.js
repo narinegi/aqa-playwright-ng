@@ -13,7 +13,6 @@ export default class GaragePage extends BasePage {
         this.addCarButton = page.getByRole('button', { name: 'Add car' });
         this.existingCarsList = page.locator('.car-list .car-item');
     }
-
     async openAddCarPopup() {
         await this.addCarButton.click();
         return new AddCarPopup(this._page);
